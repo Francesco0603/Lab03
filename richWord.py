@@ -1,7 +1,7 @@
 class RichWord:
     def __init__(self, parola):
         self._parola = parola # this is a string
-        self._corretta = None #this is a bool
+        self._corretta = bool #this is a bool
 
     @property
     def corretta(self):
@@ -9,7 +9,7 @@ class RichWord:
         return self._corretta
 
     @corretta.setter
-    def corretta(self, boolValue):
+    def setCorretta(self, boolValue):
         # print("setter of parola called" )
         self._corretta = boolValue
 

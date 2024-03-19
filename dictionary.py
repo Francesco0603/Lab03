@@ -1,13 +1,14 @@
 class Dictionary:
     def __init__(self):
-        pass
+        self._dict = []
 
     def loadDictionary(self,path):
-        pass
-
+        bello = path
+        with open("resources/Italian.txt",'r') as file:
+            for parola in file:
+                self.dict.append(parola)
     def printAll(self):
-        pass
-
+        return self.dict.__str__()
 
     @property
     def dict(self):
