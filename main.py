@@ -7,12 +7,15 @@ while(True):
 
     if flag:
         print("------------------------\n")
-        print("Metodo Contains, che in realtà ho usato un in...")
+        print("Metodo Contains, che in realtà ho usato un in...\n")
         print(stampaContains)
-        print("Metodo Linear")
+        print()
+        print("Metodo Linear\n")
         print(stampaLinear)
-        print("Metodo Dicho")
+        print()
+        print("Metodo Dicho\n")
         print(stampaDicho)
+        print()
         print("------------------------\n")
 
     txtIn = input()

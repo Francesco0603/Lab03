@@ -11,19 +11,19 @@ class SpellChecker:
         testo = replaceChars(txtIn)
         t1 = time.time()
         self.multidic.searchWord(testo, language)
-        tempo = f"\n time elapsed: {time.time()-t1}"
+        tempo = f"time elapsed: {time.time()-t1}"
         return self.multidic.paroleErrate+tempo
     def handleSentenceLine(self, txtIn, language):
         testo = replaceChars(txtIn)
         t1 = time.time()
         self.multidic.searchWordLinear(testo, language)
-        tempo = f"\n time elapsed: {time.time()-t1}"
+        tempo = f"time elapsed: {time.time()-t1}"
         return self.multidic.paroleErrate+tempo
     def handleSentenceDicho(self, txtIn, language):
         testo = replaceChars(txtIn)
         t1 = time.time()
         self.multidic.searchWordDichotomic(testo, language)
-        tempo = f"\n time elapsed: {time.time()-t1}"
+        tempo = f"time elapsed: {time.time()-t1}"
         return self.multidic.paroleErrate+tempo
 
     def printMenu(self):

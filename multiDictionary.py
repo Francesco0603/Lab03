@@ -21,6 +21,7 @@ class MultiDictionary:
         self.dictionary.printAll()
 
     def searchWord(self, words, language):
+        self._richWords.clear()
         self.selezionaLingua(language)
         wordsList = words.split(" ")
         for inputWord in wordsList:
@@ -32,6 +33,7 @@ class MultiDictionary:
                 rword.setCorretta(False)
                 self._richWords.append(parolinaMagica)
     def searchWordLinear(self, words, language):
+        self._richWords.clear()
         self.selezionaLingua(language)
         wordsList = words.split(" ")
         for inputWord in wordsList:
@@ -47,6 +49,7 @@ class MultiDictionary:
                 rword.setCorretta(False)
                 self._richWords.append(parolinaMagica)
     def searchWordDichotomic(self, words, language):
+        self._richWords.clear()
         self.selezionaLingua(language)
         wordsList = words.split(" ")
         for inputWord in wordsList:
