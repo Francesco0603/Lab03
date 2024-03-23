@@ -5,6 +5,7 @@ flag = False
 while(True):
     sc.printMenu()
 
+    # versione quasi finita 23/03
     txtIn = input()
     # Add input control here!
 
