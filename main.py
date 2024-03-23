@@ -9,13 +9,6 @@ while(True):
         print("------------------------\n")
         print("Metodo Contains, che in realtà ho usato un in...\n")
         print(stampaContains)
-        print()
-        print("Metodo Linear\n")
-        print(stampaLinear)
-        print()
-        print("Metodo Dicho\n")
-        print(stampaDicho)
-        print()
         print("------------------------\n")
 
     txtIn = input()
@@ -25,8 +18,6 @@ while(True):
         print("Inserisci la tua frase in Italiano\n")
         txtIn = input()
         stampaContains = sc.handleSentence(txtIn,"italian")
-        stampaLinear = sc.handleSentence(txtIn,"italian")
-        stampaDicho = sc.handleSentence(txtIn,"italian")
         flag = True
         continue
 
@@ -34,21 +25,14 @@ while(True):
         print("Inserisci la tua frase in Inglese\n")
         txtIn = input()
         stampaContains = sc.handleSentence(txtIn,"english")
-        stampaLinear = sc.handleSentence(txtIn,"english")
-        stampaDicho = sc.handleSentence(txtIn,"english")
         flag = True
-
         continue
 
     if int(txtIn) == 3:
         print("Inserisci la tua frase in Spagnolo\n")
         txtIn = input()
         stampaContains = sc.handleSentence(txtIn,"spanish")
-        stampaLinear = sc.handleSentenceLine(txtIn,"spanish")
-        stampaDicho = sc.handleSentence(txtIn,"spanish")
-
         flag = True
-
         continue
 
     if int(txtIn) == 4:
