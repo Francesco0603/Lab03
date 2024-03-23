@@ -11,11 +11,11 @@ class MultiDictionary:
 
     def selezionaLingua(self,language):
         if language.__eq__("english"):
-            self.dictionary.loadDictionary('English.txt')
+            self.dictionary.loadDictionary("English.txt")
         if language.__eq__("italian"):
             self.dictionary.loadDictionary("Italian.txt")
-        if language == "spanish":
-            self.dictionary.loadDictionary('Spanish.txt')
+        if language.__eq__("spanish"):
+            self.dictionary.loadDictionary("Spanish.txt")
     def printDic(self, language):
         self.selezionaLingua(language)
         self.dictionary.printAll()
@@ -41,10 +41,9 @@ class MultiDictionary:
             parolinaMagica = inputWord + "\n"
             rword = rw.RichWord(parolinaMagica)
             for dicWord in self.dictionary.dict:
-                if dicWord == inputWord:
+                if dicWord == parolinaMagica:
                     rword.setCorretta(True)
                     flag = False
-                    break
             if flag:
                 rword.setCorretta(False)
                 self._richWords.append(parolinaMagica)
@@ -53,19 +52,21 @@ class MultiDictionary:
         self.selezionaLingua(language)
         wordsList = words.split(" ")
         for inputWord in wordsList:
+            flag = True
             parolinaMagica = inputWord + "\n"
             rword = rw.RichWord(parolinaMagica)
             lunghezzaDict = len(self.dictionary.dict)
             newDic = self.dictionary.dict
-            for n in range(round(math.log(lunghezzaDict,2))):
-                if parolinaMagica == newDic[(lunghezzaDict)/2]:
+            for n in range(round(math.log(lunghezzaDict,2))+1):
+                posizione = round(len(newDic) / 2, None)
+                #chiamo posizione l'indice esattamente a metà del nuovo dizionario
+                if parolinaMagica == newDic[posizione]:
                     rword.setCorretta(True)
                     flag = False
-                    break
-                elif parolinaMagica < newDic[(lunghezzaDict)/2]:
-                    newDic = newDic[((lunghezzaDict)/2):]
+                elif parolinaMagica < newDic[posizione]:
+                    newDic = newDic[:posizione]
                 else:
-                    newDic = newDic[:((lunghezzaDict)/2)]
+                    newDic = newDic[posizione:]
             if flag:
                 rword.setCorretta(False)
                 self._richWords.append(parolinaMagica)
